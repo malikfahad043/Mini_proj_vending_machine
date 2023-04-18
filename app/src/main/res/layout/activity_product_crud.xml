@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/black"
+    tools:context=".ProductCRUD">
+
+    <EditText
+        android:id="@+id/prdName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="15"
+        android:backgroundTint="@color/white"
+        android:textColorHint="@color/white"
+        android:hint="Enter product Name"
+        android:inputType="text"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/prdquantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:textColorHint="@color/white"
+        android:layout_below="@id/prdName"
+        android:ems="15"
+        android:hint="Enter product quantity"
+        android:inputType="number"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/prdprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/prdquantity"
+        android:ems="15"
+        android:backgroundTint="@color/white"
+        android:textColorHint="@color/white"
+        android:hint="Enter product Price"
+        android:inputType="number"
+        android:minHeight="48dp" />
+
+    <ImageView
+        android:id="@+id/prdimg"
+        android:layout_width="314dp"
+        android:layout_height="98dp"
+        android:layout_below="@id/prdprice"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/kitkat" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/add"
+        android:layout_width="313dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/prdimg"
+        android:background="#C30A0A"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="Add Product" />
+
+
+</RelativeLayout>

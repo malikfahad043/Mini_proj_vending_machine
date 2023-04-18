@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="Registration"
+
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="120dp"
+        android:textSize="30sp"/>
+
+    <EditText
+        android:id="@+id/u_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:backgroundTint="@color/white"
+        android:ems="12"
+        android:hint="user Name"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColorHint="@color/white" />
+
+    <EditText
+        android:id="@+id/u_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/u_username"
+
+        android:layout_centerInParent="true"
+        android:backgroundTint="@color/white"
+        android:ems="12"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:textColorHint="@color/white" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/u_login"
+        android:layout_width="249dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/u_password"
+        android:layout_centerInParent="true"
+        android:background="#BC1111"
+        android:text="Login"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+</RelativeLayout>
