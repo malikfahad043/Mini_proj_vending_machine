@@ -44,6 +44,9 @@ public class Product implements Parcelable {
         }
     };
 
+    public static void setOnClickListener(Object o) {
+    }
+
     public int getPrice() {
         return price;
     }

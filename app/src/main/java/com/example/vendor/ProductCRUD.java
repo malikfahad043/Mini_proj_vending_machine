@@ -8,6 +8,7 @@ import android.os.Parcelable;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -15,14 +16,15 @@ public class ProductCRUD extends AppCompatActivity {
 
     private EditText p_name,p_quantity,p_price;
     private ImageView p_img;
-    private Button addProduct;
+    private Button addProduct,listProduct;
     private ArrayList<Product> products;
+    public Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_crud);
-        initComponents();
         products = new ArrayList<>();
+        initComponents();
         settingUpListners();
     }
 
@@ -32,13 +34,18 @@ public class ProductCRUD extends AppCompatActivity {
             p.setName(p_name.getText().toString());
             p.setQuantity(Integer.parseInt(p_quantity.getText().toString()));
             p.setPrice(Integer.parseInt(p_price.getText().toString()));
-            p.setImageID((int)p_img.getTag());
+            p.setImageID(p_img.getId());
             products.add(p);
+            Toast.makeText(this, "add successfully", Toast.LENGTH_SHORT).show();
+
+        });
+        listProduct.setOnClickListener(view -> {
             Intent i = new Intent(ProductCRUD.this,ProductList.class);
             i.putExtra("prdList",products);
             startActivity(i);
 
         });
+
     }
 
     private void initComponents() {
@@ -47,5 +54,6 @@ public class ProductCRUD extends AppCompatActivity {
         p_price  = findViewById(R.id.prdprice);
         p_img = findViewById(R.id.prdimg);
         addProduct = findViewById(R.id.add);
+        listProduct = findViewById(R.id.productList);
     }
 }

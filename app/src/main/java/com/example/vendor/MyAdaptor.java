@@ -46,9 +46,9 @@ public class MyAdaptor extends BaseAdapter {
         TextView p_quantity = view.findViewById(R.id.p_quantity);
         TextView p_price = view.findViewById(R.id.p_price);
         p_img.setImageResource(R.drawable.ic_launcher_background);
-        p_name.setText("KITKAT");
-        p_quantity.setText("Quantity:50");
-        p_price.setText("Rs.150/-");
+        p_name.setText(myList.get(i).getName());
+        p_quantity.setText(myList.get(i).getQuantity()+"");
+        p_price.setText(myList.get(i).getPrice()+"");
         return view;
     }
 }
