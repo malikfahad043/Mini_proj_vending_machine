@@ -61,5 +61,16 @@
         android:textStyle="bold"
         android:text="Add Product" />
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/productList"
+        android:layout_width="313dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/prdimg"
+        android:layout_marginTop="68dp"
+        android:background="#C30A0A"
+        android:text="List of Products"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
 
 </RelativeLayout>
